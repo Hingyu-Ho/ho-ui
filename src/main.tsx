@@ -1,15 +1,15 @@
-import "./main.css";
+import './styles/index.scss'
 
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 
-import App from "./App";
+import App from './App'
 
-const container = document.getElementById("root");
-const root = createRoot(container as HTMLDivElement);
+const container = document.getElementById('root')
+const root = createRoot(container as HTMLDivElement)
 
 root.render(
   <StrictMode>
     <App />
   </StrictMode>
-);
+)

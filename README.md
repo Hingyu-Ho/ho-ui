@@ -116,3 +116,9 @@ vsCode 打开【首先项-设置】，搜索 styleline 配置，
 ```
 npm i -D stylelint stylelint-config-prettier stylelint-config-standard stylelint-order stylelint-config-standard-scss
 ```
+
+## 色彩设计
+
+- 基础色彩系统，主色调、次色调、警告、提示
+- 字体色彩，大标题、小标题
+- 其他（阴影、边框、背景）

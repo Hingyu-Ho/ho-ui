@@ -9,6 +9,14 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: isDevelopment ? [(legacy(), react())] : [],
+  esbuild: {
+    /**
+     * @warning
+     * 目前vitejs/app不支持jsx的自动转化
+     * 自动帮你在jsx文件中插入React，当然如果你文件中已经导入React了，记得自己删掉，因为一个文件里不能有两行
+     */
+    jsxInject: `import React from 'react'` // automatically import React in jsx files
+  },
   resolve: {
     alias: {
       // for TypeScript path alias import like : @/x/y/z
