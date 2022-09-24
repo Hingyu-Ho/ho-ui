@@ -88,3 +88,10 @@ npm run serve
 ## License
 
 This project is licensed under the MIT License.
+
+## 协同
+
+- Run commit
+  commitizen、cz-customizable 提交 commit 更新检查信息
+  -Run log
+  生成版本日志，自动根据版本号更新
