@@ -112,3 +112,7 @@ vsCode 打开【首先项-设置】，搜索 styleline 配置，
 ```
 npm i -D stylelint stylelint-config-prettier stylelint-config-standard stylelint-order stylelint-config-standard-scss
 ```
+
+## husky + lint-staged + commitizen 配置提交代码规范
+
+https://blog.csdn.net/lhz_333/article/details/126461947#:~:text=lint-staged%20%E8%BF%99%E4%B8%AA%E5%B7%A5%E5%85%B7%E4%B8%80%E8%88%AC%E7%BB%93%E5%90%88%20husky%20%E6%9D%A5%E4%BD%BF%E7%94%A8%EF%BC%8C%E5%AE%83%E5%8F%AF%E4%BB%A5%E8%AE%A9%20husky%20%E7%9A%84,hook%20%E8%A7%A6%E5%8F%91%E7%9A%84%E5%91%BD%E4%BB%A4%E5%8F%AA%E4%BD%9C%E7%94%A8%E4%BA%8E%20git%20add%20%E9%82%A3%E4%BA%9B%E6%96%87%E4%BB%B6%EF%BC%88%E5%8D%B3%20git%20%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%89%E3%80%82
