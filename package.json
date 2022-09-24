@@ -10,7 +10,8 @@
     "commit": "git-cz",
     "dev": "vite",
     "format": "prettier . --write --ignore-path .gitignore && git update-index --again",
-    "lint": "eslint . --ext .ts,.tsx --fix --ignore-path .gitignore",
+    "lint:eslint": "eslint . --ext .ts,.tsx --fix --ignore-path .gitignore",
+    "lint:stylelint": "stylelint --cache --fix \"**/*.{less,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "prepare": "husky install",
     "serve": "npm run build && vite preview --port 3000",
@@ -27,6 +28,10 @@
     ],
     "*.ts?(x)": [
       "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{scss,less,styl,css,html}": [
+      "stylelint --fix",
       "prettier --write"
     ],
     "package.json": "npx sort-package-json"
@@ -82,6 +87,11 @@
     "prettier": "^2.7.1",
     "sort-package-json": "^1.57.0",
     "start-server-and-test": "^1.14.0",
+    "stylelint": "^14.12.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0",
     "ts-jest": "^28.0.5",
     "typescript": "^4.7.4",
     "vite": "^2.9.12"

@@ -93,5 +93,22 @@ This project is licensed under the MIT License.
 
 - Run commit
   commitizen、cz-customizable 提交 commit 更新检查信息
-  -Run log
+
+- Run log
   生成版本日志，自动根据版本号更新
+
+## 样式规范工具(styleline)
+
+样式规则配置文件 styleline.config.js
+
+vsCode 配置 styleline 插件（工具市场搜索【styleline<Official Stylelint extension for Visual Studio Code>】
+
+vsCode 打开【首先项-设置】，搜索 styleline 配置，
+
+- 检查 Stylelint.Enable 设置为 true
+- Stylelint.Snippet、Stylelint.Validate 点击添加项 scss
+- npm 安装开发依赖
+
+```
+npm i -D stylelint stylelint-config-prettier stylelint-config-standard stylelint-order stylelint-config-standard-scss
+```

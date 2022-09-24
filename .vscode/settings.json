@@ -1,0 +1,21 @@
+{
+  "editor.fontSize": 16,
+
+  // npm i -D stylelint stylelint-config-prettier stylelint-config-standard stylelint-order
+  "stylelint.snippet": ["css", "less", "postcss", "scss"],
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  // style 格式化、规则校验
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true,
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  }
+}
