@@ -1,6 +1,6 @@
 {
   "editor.fontSize": 16,
-
+  // 添加需要校验的文件
   // npm i -D stylelint stylelint-config-prettier stylelint-config-standard stylelint-order
   "stylelint.snippet": ["css", "less", "postcss", "scss"],
   "stylelint.enable": true,
