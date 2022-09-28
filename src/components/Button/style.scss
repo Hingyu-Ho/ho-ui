@@ -1,0 +1,60 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
+.btn {
+  @include btn;
+  @include btn-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+}
+
+// 按钮尺寸
+.btn-size-large {
+  @include btn-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $border-radius-lg);
+}
+
+.btn-size-default {
+  @include btn-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+}
+
+.btn-size-small {
+  @include btn-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $border-radius-sm);
+}
+
+// 按钮类型（色系）
+.btn-type-primary {
+  @include btn-style(
+    var(--color-primary),
+    var(--color-primary),
+    var(--color-white),
+    var(--color-primary-hover),
+    var(--color-primary-hover),
+    var(--color-white)
+  );
+}
+
+.btn-type-danger {
+  @include btn-style(var(--color-danger), var(--color-danger), var(--color-white), var(--color-danger-hover), var(--color-danger-hover), var(--color-white));
+}
+
+.btn-type-default {
+  @include btn-style(
+    var(--color-fill-0),
+    var(--color-fill-0),
+    var(--color-text-0),
+    var(--color-default-hover),
+    var(--color-default-hover),
+    var(--color-text-0)
+  );
+}
+
+.btn-type-link {
+  text-decoration: none;
+  color: var(--color-link);
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+
+  &.disabled {
+    color: var(--color-disabled-text);
+  }
+}

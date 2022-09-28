@@ -2,7 +2,7 @@
 // FunctionComponent -> hooks
 // 推荐使用 Typescript React code snippets[tsrpfc、tsrsfc、tsdrpfc]
 
-import './Button.scss'
+import './style.scss'
 
 // import * as React from 'react'
 import classnames from 'classnames'
@@ -33,8 +33,8 @@ const App: React.FunctionComponent<ButtonProps> = (props) => {
   console.log(type === 'link' && disabled)
 
   const classes = classnames('btn', className, {
-    [`btn-${type}`]: type,
-    [`btn-${size}`]: size,
+    [`btn-size-${size}`]: size,
+    [`btn-type-${type ? type : 'default'}`]: true,
     disabled: type === 'link' && disabled
   })
   if (type === 'link' && href) {
