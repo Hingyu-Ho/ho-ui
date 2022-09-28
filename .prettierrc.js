@@ -1,6 +1,6 @@
 module.exports = {
     printWidth: 160, // 超过最大值换行
-    tabWidth: 4, // 缩进字节数
+    tabWidth: 2, // 缩进字节数
     useTabs: false, // 缩进不使用tab，使用空格
     semi: false, // 句尾添加分号
     singleQuote: true, // 使用单引号代替双引号

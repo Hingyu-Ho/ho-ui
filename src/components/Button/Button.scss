@@ -1,0 +1,19 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
+.btn {
+  @include btn;
+  @include btn-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+}
+
+.btn-large {
+  @include btn-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $border-radius-lg);
+}
+
+.btn-default {
+  @include btn-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+}
+
+.btn-small {
+  @include btn-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $border-radius-sm);
+}

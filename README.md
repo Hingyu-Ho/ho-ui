@@ -122,3 +122,7 @@ npm i -D stylelint stylelint-config-prettier stylelint-config-standard stylelint
 - 基础色彩系统，主色调、次色调、警告、提示
 - 字体色彩，大标题、小标题
 - 其他（阴影、边框、背景）
+
+## 记录 library
+
+cra-template-npm-library
