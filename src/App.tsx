@@ -8,7 +8,9 @@ export default function App() {
         <Button disabled onClick={() => console.log('test default button')}>
           Default Button
         </Button>
-        <Button size='large'>Large Button</Button>
+        <Button loading size='large'>
+          Large Button
+        </Button>
         <Button size='default'>Default Button</Button>
         <Button size='small'>Small Button</Button>
         <Button type='primary'>Primary Button</Button>

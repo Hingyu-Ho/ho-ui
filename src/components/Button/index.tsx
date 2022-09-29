@@ -30,22 +30,31 @@ export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
 const App: React.FunctionComponent<ButtonProps> = (props) => {
   const { className, disabled, loading, size, type, href, children, ...rest } = props
-  console.log(type === 'link' && disabled)
 
-  const classes = classnames('btn', className, {
-    [`btn-size-${size}`]: size,
-    [`btn-type-${type ? type : 'default'}`]: true,
-    disabled: type === 'link' && disabled
-  })
   if (type === 'link' && href) {
+    const classes = classnames('btn', className, {
+      [`btn-size-${size}`]: size,
+      [`btn-type-${type}`]: type,
+      disabled
+    })
     return (
       <a href={href} className={classes} {...rest}>
         {children}
       </a>
     )
   } else {
+    const classes = classnames('btn', className, {
+      [`btn-size-${size}`]: size,
+      [`btn-type-${type ? type : 'default'}`]: !disabled,
+      loading
+    })
     return (
       <button disabled={disabled} className={classes} {...rest}>
+        {loading && (
+          <span className='pr-1'>
+            <i className='fas fa-spinner pin'></i>
+          </span>
+        )}
         {children}
       </button>
     )

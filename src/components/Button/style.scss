@@ -58,3 +58,33 @@
     color: var(--color-disabled-text);
   }
 }
+
+.loading {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: var(--color-white);
+    opacity: 0.35;
+    content: '';
+    inset: -1px;
+    pointer-events: none;
+  }
+}
+
+.pin {
+  animation: pin 2s infinite linear;
+}
+
+@keyframes pin {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(359deg);
+  }
+}
