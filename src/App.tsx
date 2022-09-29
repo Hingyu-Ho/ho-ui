@@ -1,9 +1,15 @@
+import { FaAppStoreIos } from 'react-icons/fa'
+
 import Button from '@/components/Button'
 
 export default function App() {
   return (
     <main className='semi-always-light'>
-      <div className='title'>Button:</div>
+      <h3>Icons</h3>
+      <div>
+        <FaAppStoreIos size={'22px'} color='var(--color-success)'></FaAppStoreIos>
+      </div>
+      <h3>Button组件</h3>
       <div>
         <Button disabled onClick={() => console.log('test default button')}>
           Default Button

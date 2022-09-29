@@ -126,3 +126,7 @@ npm i -D stylelint stylelint-config-prettier stylelint-config-standard stylelint
 ## 记录 library
 
 cra-template-npm-library
+
+## icons 方案
+
+https://react-icons.github.io/react-icons/
