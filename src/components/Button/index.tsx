@@ -51,8 +51,8 @@ const App: React.FunctionComponent<ButtonProps> = (props) => {
     return (
       <button disabled={disabled} className={classes} {...rest}>
         {loading && (
-          <span className='pr-1'>
-            <i className='fas fa-spinner pin'></i>
+          <span className="pr-1">
+            <i className="fas fa-spinner pin"></i>
           </span>
         )}
         {children}

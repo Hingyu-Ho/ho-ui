@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3d-cuboid</title>
+    <style>
+      :root {
+        /* 定义长、宽、高 */
+        --length: 300px;
+        --width: 200px;
+        --height: 100px;
+        --half-length: 150px;
+        --half-width: 100px;
+        --half-height: 50px;
+        /* 容器 */
+        --wrapper: 500px;
+      }
+      /* 定义动画 */
+      @keyframes RotateAnimation {
+        form {
+          transform: rotate3d(1, 0, 1, 0deg);
+        }
+        to {
+          transform: rotate3d(1, 0, 1, 360deg);
+        }
+      }
+    </style>
+    <style>
+      div:nth-child(1) {
+        width: var(--width);
+        height: var(--height);
+        transform: translate3d(0, 0, var(--half-length));
+        background-color: aliceblue;
+      }
+      div:nth-child(2) {
+        width: var(--width);
+        height: var(--height);
+        transform: rotateY(180deg) translate3d(0, 0, var(--half-length));
+        background-color: antiquewhite;
+      }
+      div:nth-child(3) {
+        width: var(--length);
+        height: var(--height);
+        transform: rotateY(90deg) translate3d(0, 0, var(--half-width));
+        background-color: aqua;
+      }
+      div:nth-child(4) {
+        width: var(--length);
+        height: var(--height);
+        transform: rotateY(-90deg) translate3d(0, 0, var(--half-width));
+        background-color: aquamarine;
+      }
+      div:nth-child(5) {
+        width: var(--width);
+        height: var(--length);
+        transform: rotateX(90deg) translate3d(0, 0, var(--half-height));
+        background-color: azure;
+      }
+      div:nth-child(6) {
+        width: var(--width);
+        height: var(--length);
+        transform: rotateX(-90deg) translate3d(0, 0, var(--half-height));
+        background-color: beige;
+      }
+
+      section:hover > div:nth-child(1) {
+        transform: translate3d(0, 0, var(--length));
+      }
+      section:hover > div:nth-child(2) {
+        transform: rotateY(180deg) translate3d(0, 0, var(--length));
+      }
+      section:hover > div:nth-child(3) {
+        transform: rotateY(90deg) translate3d(0, 0, var(--width));
+      }
+      section:hover > div:nth-child(4) {
+        transform: rotateY(-90deg) translate3d(0, 0, var(--width));
+      }
+      section:hover > div:nth-child(5) {
+        transform: rotateX(90deg) translate3d(0, 0, var(--height));
+      }
+      section:hover > div:nth-child(6) {
+        transform: rotateX(-90deg) translate3d(0, 0, var(--height));
+      }
+
+      section {
+        margin: 200px auto;
+        width: var(--wrapper);
+        height: var(--wrapper);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: 5s RotateAnimation infinite;
+      }
+      div {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+  </body>
+</html>
