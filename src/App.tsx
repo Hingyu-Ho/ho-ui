@@ -1,6 +1,6 @@
-import { FaAppStoreIos } from 'react-icons/fa'
+import { FaAppStoreIos } from 'react-icons/fa';
 
-import Button from '@/components/Button'
+import Button from '@/components/Button';
 
 export default function App() {
   return (
@@ -38,5 +38,5 @@ export default function App() {
         </Button>
       </div>
     </main>
-  )
+  );
 }

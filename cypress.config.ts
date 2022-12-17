@@ -1,6 +1,6 @@
-import { devServer } from '@cypress/vite-dev-server'
-import { defineConfig } from 'cypress'
-import path from 'path'
+import { devServer } from '@cypress/vite-dev-server';
+import { defineConfig } from 'cypress';
+import path from 'path';
 
 export default defineConfig({
   video: false,
@@ -14,11 +14,11 @@ export default defineConfig({
           viteConfig: {
             configFile: path.resolve(__dirname, 'vite.config.ts')
           }
-        })
-      })
+        });
+      });
 
-      return config
+      return config;
     },
     baseUrl: 'http://localhost:3000'
   }
-})
+});

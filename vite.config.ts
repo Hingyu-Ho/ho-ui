@@ -1,12 +1,12 @@
-import legacy from '@vitejs/plugin-legacy'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
-import { defineConfig } from 'vite'
+import legacy from '@vitejs/plugin-legacy';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
+import { fileURLToPath } from 'url';
+import { defineConfig } from 'vite';
 
-import pkg from './package.json'
+import pkg from './package.json';
 
-const isDevelopment = process.env.NODE_ENV === 'development'
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -54,4 +54,4 @@ export default defineConfig({
       }
     }
   }
-})
+});
