@@ -4,6 +4,8 @@ import { resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
 
+import pkg from './package.json'
+
 const isDevelopment = process.env.NODE_ENV === 'development'
 
 // https://vitejs.dev/config/
@@ -36,9 +38,9 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/components/index.tsx'),
       // 暴露的全局变量
-      name: 'EfUI',
+      name: 'HoUI',
       // 输出的包文件名
-      fileName: (format) => `ef-ui.${format}.js`
+      fileName: (format) => `${pkg.name}.${format}.js`
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
